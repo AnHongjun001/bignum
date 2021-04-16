@@ -18,7 +18,7 @@ g++ demo.cpp bigint.cpp
 ```
 Then run *a.out* to start the program.
 
-##Initialize
+## Initialize
 
 Here we show three methods to initialize a *bigint* data.
 
@@ -33,7 +33,7 @@ bigint a = 12345;
 bigint b(12345);
 ```
 
-##I/O
+## I/O
 
 You can input a *bigint* from your keyboard or ouput a *bigint* to your screen.
 
