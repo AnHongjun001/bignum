@@ -1,7 +1,51 @@
 # bignum
-A C++ class for big-number operation.
+大整数类（C++）
+A C++ class for big-number operation, which can absolutely compatible with standard int.
 
-Here is the demo.cpp
+##How to use our class
+
+Run the command line below first to download the files.
+```bash
+git clone https://github.com/AnHongjun001/bignum.git
+```
+
+Create a new file, such as main.cpp, or directly write in the demo.cpp. You need to include *bigint.h* in your file then you can use the data-type *bigint*, which could store a big integer.
+
+Run command like this when you need to Compile the program.(use demo.cpp for example)
+
+```bash
+g++ demo.cpp bigint.cpp
+```
+Then run *a.out* to start the program.
+
+##Initialize
+
+Here we show three methods to initialize a *bigint* data.
+
+* Initialize without any parament, it will be initialized to 0.
+```cpp
+bigint a;
+```
+
+* Initialize with a standard integer. Here are two methods.
+```cpp
+bigint a = 12345;
+bigint b(12345);
+```
+
+##I/O
+
+You can input a *bigint* from your keyboard or ouput a *bigint* to your screen.
+
+* Input: here are two methods.
+```cpp
+bigint a;
+read(a);
+```
+```cpp
+bigint b;
+b.read();
+```
 
 ```cpp
 #include <cstdio>
@@ -47,3 +91,5 @@ int main(){
 }
 
 ```
+
+You can
