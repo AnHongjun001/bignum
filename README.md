@@ -1,6 +1,4 @@
-# bignum
-
-大整数类（C++）
+# bignum：兼容int类型的大整数计算类（C++）
 
 A C++ class for big-number operation, which can absolutely compatible with standard int.
 
@@ -19,6 +17,52 @@ Run command like this when you need to Compile the program.(use demo.cpp for exa
 g++ demo.cpp bigint.cpp
 ```
 Then run *a.out* to start the program.
+
+## Overview
+
+You can overview all methods of my class *bigint* in file *bigint.h*, and here is a part of it.
+```cpp
+class bigint;
+void read(bigint& number);
+
+class bigint{
+private:
+	int sign = 1;
+	int data[BIGINT_MAXLEN];
+	bigint abs_plus(const bigint& a, const bigint& b);
+	bigint abs_minus(const bigint& a, const bigint& b);
+	int abs_cmp(const bigint& a, const bigint& b);
+public:
+	bigint();
+	bigint(int init_number);
+	bool operator > (const bigint& b);
+	bool operator > (const int& b);
+	bool operator < (const bigint& b);
+	bool operator < (const int& b);
+	bool operator >= (const bigint& b);
+	bool operator >= (const int& b);
+	bool operator <= (const bigint& b);
+	bool operator <= (const int& b);
+	bool operator == (const bigint& b);
+	bool operator == (const int& b);
+	bool operator != (const bigint& b);
+	bool operator != (const int& b);
+	bigint operator + (const bigint& b);
+	bigint operator + (const int& b);
+	bigint operator - (const bigint& b);
+	bigint operator - (const int& b);
+	bigint operator * (const bigint& b);
+	bigint operator * (const int& b);
+	bigint operator = (int& init_number);
+	void read();
+	void print();
+	void print(char split);
+	void print(char split, char end);
+	bool zero();
+	bigint pow(int n);	//O(log n)
+};
+```
+For more, see file *bigint.h* and *bigint.cpp*.
 
 ## Initialize
 
