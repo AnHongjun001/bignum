@@ -1,8 +1,10 @@
 # bignum
+
 大整数类（C++）
+
 A C++ class for big-number operation, which can absolutely compatible with standard int.
 
-##How to use our class
+## How to use our class
 
 Run the command line below first to download the files.
 ```bash
